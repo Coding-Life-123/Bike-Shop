@@ -98,10 +98,10 @@ function PageComponent({ bikeData }) {
   ];
 
   return (
-    <div className=" text-white px-4 my-4">
-      <div className="2xl:text-2xl xl:text-xl lg:text-lg md:text-sm">
-        <div className="w-1/3 mx-auto 2xl:h-[720px] 2xl:w-[250px] xl:h-[585px] xl:w-[200px] lg:h-[455px] lg:w-[160px] md:h-[370px] md:w-[130px] opacity-85 absolute bg-black">
-          <div className="2xl:mt-[180px] xl:mt-[140px] lg:mt-[100px] md:mt-[40px] md mx-auto my-auto align-middle h-fit px-3 w-full font-semibold">
+    <div className="mx-auto text-white px-4 my-4">
+      <div className="2xl:text-2xl xl:text-xl lg:text-lg md:text-sm block w-fit mx-auto">
+        <div className="w-1/3 2xl:h-[720px] 2xl:w-[250px] xl:h-[585px] xl:w-[200px] lg:h-[455px] lg:w-[160px] md:h-[370px] md:w-[130px] opacity-85 absolute bg-black">
+          <div className="2xl:mt-[180px] xl:mt-[140px] lg:mt-[100px] md:mt-[40px] align-middle h-fit px-3 w-full font-semibold">
             <div className="mx-auto">{data.Name}</div>
             <p className="my-12 mx-auto">Price: ${data.Cost}</p>
             <div className="block xl:text-sm md:text-[10px] text-center">
@@ -125,7 +125,7 @@ function PageComponent({ bikeData }) {
           alt=""
         />
       </div>
-      <div className="w-full">
+      <div className="w-full mr-10">
         <section id="bikeDesc" className="w-[500px] mx-auto">
           <p className="lg:text-xl mt-8 p-8 rounded-2xl bg-[rgb(45,45,45)] shadow-[0px_0px_10px] shadow-black">
             {data.BikeDesc}

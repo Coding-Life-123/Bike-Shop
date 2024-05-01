@@ -8,8 +8,6 @@ var Data = await fetch("http://localhost:3000/data", {
   .then((response) => response.json())
   .then((data) => (Data = data));
 
-Data.map((elemento) => console.log(elemento));
-
 function MainPage() {
   const [isDataFiltered, setIsDataFiltered] = useState(false);
   const [typeData, setTypeData] = useState();
@@ -26,7 +24,6 @@ function MainPage() {
     )
     const BikeData = await response.json();
     setBikeData(BikeData)
-    console.log(id)
     setBikePage(true)
   }
 
@@ -101,12 +98,12 @@ function MainPage() {
 
   return (
     <div className="px-10">
-      <div className="w-full">
-        <h1 className="w-fit m-auto text-3xl font-semibold text-center mt-12 mb-8 text-white">
+      <div className="w-full block mx-auto">
+        <h1 className="w-fit mx-auto text-3xl font-semibold text-center mt-12 mb-8 text-white">
           Your Next Bike
         </h1>
-        <div className="z-20 2xl:w-[1480px] xl:w-[1210px] lg:w-[950px] md:w-[700px]">
-          <nav className="h-fit text-white mb-6 w-full py-3 bg-[rgb(5,5,15)] rounded-3xl flex justify-center px-4 md:px-0">
+        <div className="z-20 2xl:w-[1480px] xl:w-[1210px] lg:w-[950px] md:w-[700px] mx-auto">
+          <nav className="h-fit text-white mb-6 w-full py-3 bg-[rgb(5,5,15)] rounded-3xl flex justify-center px-4 md:px-0 mx-auto">
             <button
               onClick={() => {setIsDataFiltered(false); setBikePage(false); recentElement ? document.getElementById(recentElement).classList.add("hidden"): null}}
               id="homeElement"
@@ -241,7 +238,6 @@ function MainPage() {
             </div>
           </nav>
         </div>
-
         {bikePage ? (
           <PageComponent bikeData={bikeData}/>
         ) : (

@@ -14,8 +14,8 @@ function hideDetails(num){
 function BikeComponent({BikeData, setBikePage}) {
   
   return (
-    <div className="flex justify-center items-center mx-4 px-4">
-      <div className='inline-block justify-center items-center w-[1800px] sm:w-[600px] md:w-[700px] lg:w-[960px] xl:w-[1200px] 2xl:w-[1880px] mx-auto'>
+    <div className="flex justify-center items-center text-center w-fit mx-auto px-4">
+      <div className=' w-[1800px] sm:w-[600px] md:w-[700px] lg:w-[960px] xl:w-[1200px] 2xl:w-[1480px] mx-auto'>
         {BikeData.map((element) => (
           <div
             key={element.BikeID}
