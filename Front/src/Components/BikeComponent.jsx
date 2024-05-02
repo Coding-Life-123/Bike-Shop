@@ -19,7 +19,7 @@ function BikeComponent({BikeData, setBikePage}) {
         {BikeData.map((element) => (
           <div
             key={element.BikeID}
-            className="w-[300px] bg-[rgb(100,100,100)] text-[rgb(200,200,200)] inline-block cursor-pointer hover:overflow- hover:border-[2px] hover:shadow-2xl hover:shadow-blue-600 align-top mx-5 my-5 py-3 px-5 rounded-2xl"
+            className="w-[300px] bg-[rgb(100,100,100)] text-[rgb(200,200,200)] inline-block cursor-pointer shadow-lg z-30 shadow-gray-400 hover:shadow-blue-600 hover:border-b align-top mx-5 my-5 py-3 px-5 rounded-2xl"
             onMouseEnter={() => showDetails(element.BikeID)}
             onMouseLeave={() => hideDetails(element.BikeID)}
             onClick={() => setBikePage(element.BikeID)}
@@ -28,7 +28,7 @@ function BikeComponent({BikeData, setBikePage}) {
               <img
                 src={element.Image}
                 alt={element.Name + "image"}
-                className="w-60 h-44 overflow-hidden  object-cover mx-auto items-center justify-center align-middle "
+                className="w-60 h-44 overflow-hidden object-cover mx-auto items-center justify-center align-middle "
               />
             </div>
 
@@ -38,7 +38,7 @@ function BikeComponent({BikeData, setBikePage}) {
             </div>
 
             
-            <div id={element.BikeID} className="hidden *:text-[17px]">
+            <div id={element.BikeID} className="absolute hidden mx-auto mt-3 border z-10 border-t-0 p-2 rounded-[26px] rounded-t-none w-[260px] shadow-blue-600 shadow-lg bg-[rgb(100,100,100)] text-center *:text-[17px]">
               <p><span className="font-bold">CC: </span>{element.EngineCC}cc</p>
               <p><span className="font-bold">Power: </span>{element.PowerHP}hp</p>
               <p><span className="font-bold">Weight: </span>{element.DryWeight}Kg</p>

@@ -243,6 +243,9 @@ function MainPage() {
         ) : (
           <BikeComponent setBikePage={bikePageFunc} BikeData={isDataFiltered ? typeData : Data} />
         )}
+        <div className="my-16 text-left text-[rgba(255,255,255,0.8)] text-xl">
+          <h1>This page is made with the only purpose of practicing my programming skills and learning from my mistakes, this is not a real shop and neither has an API to send or get money, the images are took from internet so the credits are to its respective photographers</h1>
+        </div>
       </div>
     </div>
   );
